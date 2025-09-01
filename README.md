@@ -1,14 +1,16 @@
-
 # Streaming Pipeline — Kafka + Spark Structured Streaming
 
-**Goal:** Process job-event streams in real-time, detect anomalies, and publish aggregates for dashboards.
+🌐 **Goal:** Process job-event streams in real time, detect anomalies, and publish windowed aggregates for dashboards.
 
-## Local Mock (no Kafka required)
-```bash
-python stream_mock.py
-```
+---
 
-## With Kafka (outline)
-- Producer writes JSON to topic `job_events`.
-- Spark reads from Kafka, aggregates per minute, flags anomalies.
-- Sink to console / parquet / REST endpoint.
+## 🛠️ Tools & Tech
+- **Apache Kafka** — event ingestion
+- **Spark Structured Streaming** — real-time compute (event-time windows, watermarking)
+- **Python** — local mock producer & quick demos
+- (Optional) **Schema Registry** — typed events (Avro/Protobuf)
+- (Optional) **Delta Lake / Hudi** — upserts & time travel
+
+---
+
+## 📂 Project Structure
